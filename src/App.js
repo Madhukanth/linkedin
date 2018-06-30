@@ -5,7 +5,7 @@ class App extends Component {
     return (
       <div className="App">
         <center>
-          <button style={{ marginTop: 300 }}>
+          <button style={{ marginTop: 300, backgroundColor: 'Transparent' }}>
             <a href="https://secure-reaches-84828.herokuapp.com/auth/linkedin">
               <img
                 src="https://wheebox.com/LOGIN-2/assest/images/linkedinlogin.png"
