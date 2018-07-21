@@ -11,7 +11,7 @@ class App extends Component {
               border: 0
             }}
           >
-            <a href="https://madhu051196.auth0.com/authorize?client_id=R7q5KY4SECsEcqZ4v4bjL9uqGjNXuwZd&response_type=code&connection=linkedin&scope=openid%20profile&redirect_uri=http://192.168.43.20:3090/auth/linkedin/callback">
+            <a href="https://madhu051196.auth0.com/authorize?client_id=R7q5KY4SECsEcqZ4v4bjL9uqGjNXuwZd&response_type=code&connection=linkedin&scope=openid%20profile&redirect_uri=https://secure-reaches-84828.herokuapp.com/auth/linkedin/callback">
               <img
                 src="https://wheebox.com/LOGIN-2/assest/images/linkedinlogin.png"
                 alt="signin"
