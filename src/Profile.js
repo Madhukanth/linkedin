@@ -28,7 +28,6 @@ export default class Profile extends Component {
         token: this.state.params.substr(9)
       }
     }).then(res => {
-      console.log(res);
       this.setState({ name: res.data.details.name });
       this.setState({ nickname: res.data.details.nickname });
       this.setState({ picture: res.data.details.picture });
@@ -63,7 +62,7 @@ export default class Profile extends Component {
                 <h3 id="family-name">FamilyName:</h3>
               </td>
               <td>
-                <h3>{this.state.family_name}</h3>
+                <h3>{this.state.familyName}</h3>
               </td>
             </tr>
             <tr>
@@ -71,7 +70,7 @@ export default class Profile extends Component {
                 <h3 id="given-name">GivenName:</h3>
               </td>
               <td>
-                <h3>{this.state.given_name}</h3>
+                <h3>{this.state.givenName}</h3>
               </td>
             </tr>
           </tbody>
