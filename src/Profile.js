@@ -20,9 +20,6 @@ export default class Profile extends Component {
     });
     await axios({
       method: 'post',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
       url: 'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
       data: {
         token: this.state.params.substr(9)
