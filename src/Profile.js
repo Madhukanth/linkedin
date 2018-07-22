@@ -29,11 +29,11 @@ export default class Profile extends Component {
       }
     }).then(res => {
       console.log(res);
-      this.setState({ name: res.details.name });
-      this.setState({ nickname: res.details.nickname });
-      this.setState({ picture: res.details.picture });
-      this.setState({ familyName: res.details.family_name });
-      this.setState({ givenName: res.details.given_name });
+      this.setState({ name: res.data.details.name });
+      this.setState({ nickname: res.data.details.nickname });
+      this.setState({ picture: res.data.details.picture });
+      this.setState({ familyName: res.data.details.family_name });
+      this.setState({ givenName: res.data.details.given_name });
     });
   }
 
