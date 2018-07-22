@@ -17,14 +17,14 @@ export default class Profile extends Component {
   }
   async componentDidMount() {
     await this.setState({
-      params: queryString.parse(this.props.location.search)
+      params: this.props.location.search
     });
-    console.log('PARAMETERS', this.state.params);
+    console.log(this.state.params.substr(9));
     await axios({
       method: 'post',
       url: 'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
       data: {
-        token: this.state.params
+        token: this.state.params.substr(9)
       }
     }).then(res => {
       this.setState({ name: res.details.name });
