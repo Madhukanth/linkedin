@@ -18,19 +18,20 @@ export default class Profile extends Component {
     await this.setState({
       params: this.props.location.search
     });
-    await axios({
-      method: 'post',
-      url: 'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
-      data: {
-        token: this.state.params.substr(9)
-      }
-    }).then(res => {
-      this.setState({ name: res.data.details.name });
-      this.setState({ nickname: res.data.details.nickname });
-      this.setState({ picture: res.data.details.picture });
-      this.setState({ familyName: res.data.details.family_name });
-      this.setState({ givenName: res.data.details.given_name });
-    });
+    await axios
+      .post(
+        'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
+        {
+          token: this.state.params.substr(9)
+        }
+      )
+      .then(res => {
+        this.setState({ name: res.data.details.name });
+        this.setState({ nickname: res.data.details.nickname });
+        this.setState({ picture: res.data.details.picture });
+        this.setState({ familyName: res.data.details.family_name });
+        this.setState({ givenName: res.data.details.given_name });
+      });
   }
 
   render() {
