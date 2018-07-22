@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import queryString from 'query-string';
 import axios from 'axios';
 import './profile.css';
 
@@ -19,9 +18,11 @@ export default class Profile extends Component {
     await this.setState({
       params: this.props.location.search
     });
-    console.log(this.state.params.substr(9));
     await axios({
       method: 'post',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       url: 'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
       data: {
         token: this.state.params.substr(9)
