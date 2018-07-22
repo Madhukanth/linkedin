@@ -28,6 +28,7 @@ export default class Profile extends Component {
         token: this.state.params.substr(9)
       }
     }).then(res => {
+      console.log(res);
       this.setState({ name: res.details.name });
       this.setState({ nickname: res.details.nickname });
       this.setState({ picture: res.details.picture });
