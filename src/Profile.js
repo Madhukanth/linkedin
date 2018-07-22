@@ -19,7 +19,7 @@ export default class Profile extends Component {
     await this.setState({
       params: queryString.parse(this.props.location.search)
     });
-    console.log(this.state.params);
+    console.log('PARAMETERS', this.state.params);
     await axios({
       method: 'post',
       url: 'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
