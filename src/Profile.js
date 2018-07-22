@@ -18,6 +18,9 @@ export default class Profile extends Component {
     await this.setState({
       params: this.props.location.search
     });
+    axios.defaults.headers.post['Content-Type'] =
+      'application/x-www-form-urlencoded';
+
     await axios
       .post(
         'https://secure-reaches-84828.herokuapp.com/auth/linkedin/fetchuser',
